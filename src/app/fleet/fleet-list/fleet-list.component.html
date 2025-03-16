@@ -1,0 +1,153 @@
+<div
+  class="container p-5 vh-100 d-flex justify-content-center align-items-center"
+>
+  <div
+    class="position-relative h-100 w-sm-100 w-lg-50 bg-black d-flex flex-column justify-content-between rounded-5"
+    style="width: 450px"
+  >
+    <section>
+      <!-- Top Section -->
+      <div
+        class="p-3 bg-secondary text-light rounded-5 flex-row align-items-center gap-3 w-100"
+      >
+        <!-- First row -->
+        <div
+          class="mt-3 d-flex flex-row align-items-center justify-content-between gap-3"
+        >
+          <div class="d-flex flex-row align-items-center gap-3">
+            <div
+              class="rounded-circle primary-gradient p-3 d-flex justify-content-center align-items-center cursor-pointer"
+              [routerLink]="['/fleet/list']"
+            >
+              <i
+                data-feather="arrow-left"
+                width="24"
+                height="24"
+                stroke-width="2"
+                stroke="black"
+              ></i>
+            </div>
+            <h1 class="text-light fs-3">Fleets</h1>
+          </div>
+          <div class="d-flex flex-row align-items-center gap-3">
+            <div
+              class="rounded-2 primary-gradient p-2 d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <i
+                data-feather="bell"
+                width="24"
+                height="24"
+                stroke-width="2"
+                stroke="black"
+              ></i>
+            </div>
+            <div
+              class="rounded-circle d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <i
+                data-feather="filter"
+                width="40"
+                height="40"
+                stroke-width="0"
+                stroke="black"
+                fill="#ffb002"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- Second row -->
+        <div
+          class="mt-2 d-flex flex-row align-items-center justify-content-between"
+        >
+          <h3 class="fs-4">ABC Fleet title</h3>
+        </div>
+        <!-- Third row -->
+        <div
+          class="mt-1 d-flex flex-row align-items-center justify-content-between"
+        >
+          <h3 class="fs-5">2 Total Fleets</h3>
+        </div>
+        <!-- Fourth row -->
+        <div class="mt-2">
+          <div class="search-container">
+            <input
+              type="text"
+              class="form-control search-input"
+              placeholder="Search..."
+            />
+            <i
+              data-feather="search"
+              width="24"
+              height="24"
+              stroke-width="1"
+              class="search-icon"
+            ></i>
+          </div>
+        </div>
+        <!-- Fifth row -->
+        <div class="mt-3 d-flex flex-row align-items-center gap-2">
+          <span class="badge rounded-pill text-bg-accent">place A</span>
+          <span class="badge rounded-pill text-bg-accent">place B</span>
+        </div>
+      </div>
+      <!-- Middle Section -->
+      <div class="p-3 gap-3 w-100">
+        <!-- card -->
+        <div *ngFor="let fleet of fleetData">
+          <app-fleetcard
+            [title]="fleet.title"
+            [subtitle]="fleet.subtitle"
+            [capacity]="fleet.capacity"
+            [locations]="fleet.locations"
+          ></app-fleetcard>
+        </div>
+      </div>
+    </section>
+    <!-- Bottom Section -->
+    <div
+      class="position-absolute bottom-0 start-0 end-0 m-3 p-3 border border-accent text-light d-flex flex-row align-items-center justify-content-between gap-3"
+      style="border-radius: 0px 30px 30px 30px"
+    >
+      <div class="d-flex flex-column align-items-center gap-1">
+        <i
+          data-feather="trello"
+          width="24"
+          height="24"
+          stroke-width="1"
+          stroke="white"
+        ></i>
+        <span>Dashboard</span>
+      </div>
+      <div class="d-flex text-accent flex-column align-items-center gap-1">
+        <i
+          data-feather="truck"
+          width="24"
+          height="24"
+          stroke-width="1"
+          stroke="#ffb002"
+        ></i>
+        <span>Fleet</span>
+      </div>
+      <div class="d-flex flex-column align-items-center gap-1">
+        <i
+          data-feather="clipboard"
+          width="24"
+          height="24"
+          stroke-width="1"
+          stroke="white"
+        ></i>
+        <span>Tickets</span>
+      </div>
+      <div class="d-flex flex-column align-items-center gap-1">
+        <i
+          data-feather="settings"
+          width="24"
+          height="24"
+          stroke-width="1"
+          stroke="white"
+        ></i>
+        <span>Settings</span>
+      </div>
+    </div>
+  </div>
+</div>

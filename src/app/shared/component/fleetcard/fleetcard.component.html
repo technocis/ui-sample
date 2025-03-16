@@ -1,0 +1,89 @@
+<div class="card mb-2 bg-secondary text-light w-100 cursor-pointer w-100">
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <h6 class="card-subtitle mb-2 fw-light text-gray-100">{{ subtitle }}</h6>
+    <h6 class="card-subtitle mb-2 fw-light text-gray-100">
+      {{ capacity }}
+    </h6>
+
+    <div class="d-flex flex-row align-items-center gap-2">
+      <span
+        *ngFor="let location of locations"
+        class="badge rounded-pill bg-accent px-2"
+        >{{ location }}</span
+      >
+    </div>
+
+    <div class="mt-2 row">
+      <div class="col-4 fs-5 d-flex flex-row align-items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-circle-fill text-success"
+          viewBox="0 0 16 16"
+        >
+          <circle cx="8" cy="8" r="8" />
+        </svg>
+        Inverter
+      </div>
+      <div
+        class="col-8 d-flex flex-row align-items-center justify-content-end gap-3"
+      >
+        <i data-feather="zap-off" width="24" height="24" stroke-width="1"></i>
+        <i
+          data-feather="alert-triangle"
+          width="24"
+          height="24"
+          stroke-width="1"
+        ></i>
+        <i data-feather="wifi-off" width="24" height="24" stroke-width="1"></i>
+        <i
+          data-feather="trending-down"
+          width="24"
+          height="24"
+          stroke-width="1"
+        ></i>
+        <i data-feather="repeat" width="24" height="24" stroke-width="1"></i>
+        <i data-feather="zap" width="24" height="24" stroke-width="1"></i>
+      </div>
+    </div>
+
+    <div class="mt-2 row">
+      <div class="col-4 fs-5 d-flex flex-row align-items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-circle-fill text-success"
+          viewBox="0 0 16 16"
+        >
+          <circle cx="8" cy="8" r="8" />
+        </svg>
+        Plant
+      </div>
+      <div
+        class="col-8 d-flex flex-row align-items-center justify-content-end gap-3"
+      >
+        <i data-feather="zap-off" width="24" height="24" stroke-width="1"></i>
+        <i
+          data-feather="alert-triangle"
+          width="24"
+          height="24"
+          stroke-width="1"
+        ></i>
+        <i data-feather="wifi-off" width="24" height="24" stroke-width="1"></i>
+        <i
+          data-feather="trending-down"
+          width="24"
+          height="24"
+          stroke-width="1"
+        ></i>
+        <i data-feather="repeat" width="24" height="24" stroke-width="1"></i>
+        <i data-feather="zap" width="24" height="24" stroke-width="1"></i>
+      </div>
+    </div>
+  </div>
+</div>

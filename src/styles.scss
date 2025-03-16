@@ -1,0 +1,35 @@
+@import "./assets/styles/custom.scss";
+
+.w-10 {
+  width: 10% !important;
+}
+
+.gradient-card {
+  border-radius: 0 50px 50px 50px;
+  background-image: linear-gradient(100deg, #d4b41b, #ffb002, #d4b41b);
+}
+
+.primary-gradient {
+  background-image: linear-gradient(#d4b41b, #ffb002, #d4b41b);
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  height: 50px;
+  width: 100%;
+  border-radius: 100px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
